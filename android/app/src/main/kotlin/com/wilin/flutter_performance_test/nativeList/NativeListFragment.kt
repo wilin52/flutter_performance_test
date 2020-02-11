@@ -23,6 +23,7 @@ class NativeListFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
     recyclerView = view.findViewById(R.id.fragment_recycler_view)
     val linearLayoutManager = LinearLayoutManager(context)
+    val density = context?.resources?.displayMetrics?.density ?: 1f
     recyclerView.layoutManager = linearLayoutManager
     recyclerView.adapter = NativeListAdapter(1000)
     scrollBtn = view.findViewById(R.id.native_scroll_btn)
@@ -30,7 +31,7 @@ class NativeListFragment : Fragment() {
       if(linearLayoutManager.findFirstVisibleItemPosition() != 0) {
         recyclerView.smoothScrollToPosition(0)
       } else {
-        recyclerView.smoothScrollBy(0, 10000 * 3)
+        recyclerView.smoothScrollBy(0, (10000 * density).toInt())
       }
     }
   }

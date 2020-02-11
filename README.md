@@ -1,5 +1,9 @@
 # flutter_performance_test
 
+
+## App to test the performance between native and flutter.
+
+------------------------
 A new Flutter application.
 
 ## Getting Started
