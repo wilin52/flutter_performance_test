@@ -22,7 +22,7 @@ class NativeListAdapter(val count: Int) : RecyclerView.Adapter<NativeViewHolder>
 
   override fun onBindViewHolder(holder: NativeViewHolder, position: Int) {
     if (holder is NativeContentViewHolder) {
-//      holder.textView.text = "${position - 1}"
+      holder.textView.text = "${position - 1}"
     }
   }
 
@@ -44,5 +44,5 @@ open class NativeViewHolder(view: View) : RecyclerView.ViewHolder(view)
 class NativeHeaderViewHolder(view: View) : NativeViewHolder(view)
 
 class NativeContentViewHolder(view: View) : NativeViewHolder(view) {
-//  val textView: TextView = view.findViewById(R.id.item_text)
+  val textView: TextView = view.findViewById(R.id.item_text)
 }

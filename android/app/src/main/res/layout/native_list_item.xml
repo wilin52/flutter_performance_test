@@ -5,22 +5,29 @@
   android:paddingLeft="5dp"
   android:paddingRight="5dp">
 
-<!--  <TextView-->
-<!--    android:id="@+id/item_text"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:layout_centerInParent="true"-->
-<!--    android:gravity="center"-->
-<!--    android:textColor="@android:color/black" />-->
-
-<!--  <View-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="0.5dp"-->
-<!--    android:layout_alignParentBottom="true"-->
-<!--    android:background="#1F000000" />-->
-
-  <ImageView
-    android:layout_width="wrap_content"
+  <LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:src="@drawable/local_image"/>
+    android:orientation="horizontal">
+
+    <TextView
+      android:id="@+id/item_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:gravity="center"
+      android:textColor="@android:color/black" />
+
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/local_image" />
+  </LinearLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:layout_alignParentBottom="true"
+    android:background="#1F000000" />
+
 </RelativeLayout>

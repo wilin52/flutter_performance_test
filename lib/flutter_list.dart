@@ -18,19 +18,20 @@ class _FlutterListState extends State<FlutterList> {
       body: ListView.builder(
         controller: controller,
         itemBuilder: (context, index) {
-//          return Container(
-//            padding: EdgeInsets.only(left: 5, right: 5),
-//            height: itemHeight,
-//            child: Center(child: Text("$index")),
-//            decoration: UnderlineTabIndicator(
-//                borderSide:
-//                    const BorderSide(width: 0.5, color: Colors.black12)),
-//          );
           return Container(
-              padding: EdgeInsets.only(left: 5, right: 5),
-              height: itemHeight,
-              alignment: Alignment.center,
-              child: Image.asset("images/local_image.png"));
+            padding: EdgeInsets.only(left: 5, right: 5),
+            height: itemHeight,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text("$index"),
+                Image.asset("images/local_image.png"),
+              ],
+            ),
+            decoration: UnderlineTabIndicator(
+                borderSide:
+                    const BorderSide(width: 0.5, color: Colors.black12)),
+          );
         },
         itemCount: 1000,
         itemExtent: itemHeight,
